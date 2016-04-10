@@ -16,30 +16,30 @@
 # To install in $HOME instead of /usr/local, use:
 #    make install prefix=$HOME
 
-CC=/Developer/usr/bin/gcc-4.2
+CC=/usr/bin/gcc
 
-CFLAGS= -DNO_snprintf -DHAS_sprintf_void -DNO_ERRNO_H
+CFLAGS=-O3 -DUSE_MMAP
 #CFLAGS=-O -DMAX_WBITS=14 -DMAX_MEM_LEVEL=7
 #CFLAGS=-g -DDEBUG
 #CFLAGS=-O3 -Wall -Wwrite-strings -Wpointer-arith -Wconversion \
 #           -Wstrict-prototypes -Wmissing-prototypes
 
 LDFLAGS=-L. libz.a
-LDSHARED=/Developer/usr/bin/gcc-4.2
-CPP=/Developer/usr/bin/gcc-4.2 -E
+LDSHARED=/usr/bin/gcc
+CPP=/usr/bin/gcc -E
 
 LIBS=libz.a
-SHAREDLIB=libz.dylib
-SHAREDLIBV=libz.1.2.3.dylib
-SHAREDLIBM=libz.1.dylib
+SHAREDLIB=libz.so
+SHAREDLIBV=libz.so.1.2.3
+SHAREDLIBM=libz.so.1
 
-AR=ar
-RANLIB=ranlib
+AR=/usr/bin/ar
+RANLIB=/usr/bin/ranlib
 TAR=tar
 SHELL=/bin/sh
 EXE=
 
-prefix =/Users/cawilkie/dev/builds/build_20150630/bin/XC_GCC-elf-native-xclm//host-libs
+prefix =/home/xc16/release-builds/build_20160219/bin/XC_GCC-elf-linux-xclm//host-libs
 exec_prefix =${prefix}
 libdir =${exec_prefix}/lib
 includedir =${prefix}/include
