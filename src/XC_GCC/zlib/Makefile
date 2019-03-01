@@ -16,30 +16,30 @@
 # To install in $HOME instead of /usr/local, use:
 #    make install prefix=$HOME
 
-CC=/usr/bin/gcc
+CC=/usr/bin/i686-w64-mingw32-gcc
 
-CFLAGS=-O3 -DUSE_MMAP
+CFLAGS=-O3
 #CFLAGS=-O -DMAX_WBITS=14 -DMAX_MEM_LEVEL=7
 #CFLAGS=-g -DDEBUG
 #CFLAGS=-O3 -Wall -Wwrite-strings -Wpointer-arith -Wconversion \
 #           -Wstrict-prototypes -Wmissing-prototypes
 
 LDFLAGS=-L. libz.a
-LDSHARED=/usr/bin/gcc
-CPP=/usr/bin/gcc -E
+LDSHARED=/usr/bin/i686-w64-mingw32-gcc
+CPP=/usr/bin/i686-w64-mingw32-gcc -E
 
 LIBS=libz.a
 SHAREDLIB=libz.so
 SHAREDLIBV=libz.so.1.2.3
 SHAREDLIBM=libz.so.1
 
-AR=/usr/bin/ar
-RANLIB=/usr/bin/ranlib
+AR=/usr/bin/i686-w64-mingw32-ar
+RANLIB=/usr/bin/i686-w64-mingw32-ranlib
 TAR=tar
 SHELL=/bin/sh
-EXE=
+EXE=.exe
 
-prefix =/home/xc16/release-builds/build_20170815/bin/XC_GCC-elf-linux-xclm//host-libs
+prefix =/home/xc16/release-builds/build_20171009/bin/XC_GCC-elf-mingw32-xclm//host-libs
 exec_prefix =${prefix}
 libdir =${exec_prefix}/lib
 includedir =${prefix}/include
