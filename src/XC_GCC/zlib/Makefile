@@ -39,7 +39,7 @@ TAR=tar
 SHELL=/bin/sh
 EXE=
 
-prefix =/home/xc16/release-builds/build_20170210/bin/XC_GCC-elf-linux-xclm//host-libs
+prefix =/home/xc16/release-builds/build_20170815/bin/XC_GCC-elf-linux-xclm//host-libs
 exec_prefix =${prefix}
 libdir =${exec_prefix}/lib
 includedir =${prefix}/include
